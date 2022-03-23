@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container py-2">
+        <form onsubmit="findPrime(event)">
+        <div class="d-flex align-items-center justify-content-center gap-2">
+        <div>
+            <label for="fromNumber">Start Number</label>
+            <input type="text" name="fromNumber" id="fromNumber">
+        </div>    
+        <div>
+            <label for="fromNumber">End Number</label>
+            <input type="text" name="toNumber" id="toNumber">
+        </div>
+        <button class="btn btn-primary btn-sm">Find</button>
+        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
+    </div>
+</form>
+    <span id="output">
+        
+    </span>
+    
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-2b-tab" data-bs-toggle="tab" data-bs-target="#nav-2b" type="button" role="tab" aria-controls="nav-2b" aria-selected="true">2B</button>
+                  <button class="nav-link" id="nav-2c-tab" data-bs-toggle="tab" data-bs-target="#nav-2c" type="button" role="tab" aria-controls="nav-2c" aria-selected="false">2C</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-2b" role="tabpanel" aria-labelledby="nav-2b-tab"></div>
+                <div class="tab-pane fade" id="nav-2c" role="tabpanel" aria-labelledby="nav-2c-tab"></div>
+              </div>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
